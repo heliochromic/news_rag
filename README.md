@@ -11,8 +11,8 @@ The system scrapes web content and organizes it into chapters based on document 
 ### Step 0: Install project and dependencies
 
 ```bash
-git clone https://github.com/heliochromic/rag
-cd rag
+git clone https://github.com/heliochromic/news_rag
+cd news_rag
 ```
 Then create a virtual environment and install dependencies
 
