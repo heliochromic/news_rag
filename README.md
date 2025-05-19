@@ -46,6 +46,19 @@ From the top 5 matching chunks, only the 3 most recent are returned to avoid out
 
 Instead of separate stores for text and images, everything stays together to prevent irrelevant image matches. We paste links to metadata to keep image information deateched to text chunks
 
+## Technical stack
+
+**Core model** - GPT-4o-mini for text processing and image caption generation
+
+**Framework** - LlamaIndex for document processing and retrieval workflows
+
+**Vector database** - ChromaDB for storing and searching embeddings
+
+**Embeddings** - BAAI/bge-small-en-v1.5 via HuggingFace
+```python
+Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
+```
+
 ## Technical decisions
 
 The multimodal approach was skipped intentionally. Since each chapter already has its own attached images, splitting into separate vector stores would risk returning unrelated pictures. The current setup ensures images always match their corresponding text context.
