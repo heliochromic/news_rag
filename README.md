@@ -62,3 +62,7 @@ Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
 ## Technical decisions
 
 The multimodal approach was skipped intentionally. Since each chapter already has its own attached images, splitting into separate vector stores would risk returning unrelated pictures. The current setup ensures images always match their corresponding text context.
+
+## Demo
+
+![demo](demo.gif)
